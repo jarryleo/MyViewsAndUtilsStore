@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PasswordInputLayout">
+        <attr name="pil_background" format="reference"/>
+        <attr name="pil_textSize" format="dimension"/>
+        <attr name="pil_textColor" format="color"/>
+        <attr name="pil_padding" format="dimension"/>
+        <attr name="pil_length" format="integer"/>
+        <attr name="pil_inputType" format="enum">
+            <enum name="pil_char" value="1"/>
+            <enum name="pil_number" value="2"/>
+            <enum name="pil_char_password" value="129"/>
+            <enum name="pil_number_password" value="18"/>
+        </attr>
+    </declare-styleable>
+</resources>
