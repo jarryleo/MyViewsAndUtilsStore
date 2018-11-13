@@ -52,7 +52,8 @@ public class BubbleNum extends View {
         mTextPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mTextPaint.setColor(Color.argb(255, 255, 255, 255));
         mTextPaint.setTextSize(20);
-        mTextPaint.setTextAlign(Paint.Align.CENTER);//绘制文字中间对齐
+        //绘制文字中间对齐
+        mTextPaint.setTextAlign(Paint.Align.CENTER);
     }
 
     @Override
@@ -63,7 +64,8 @@ public class BubbleNum extends View {
         int heightSpecMode = MeasureSpec.getMode(heightMeasureSpec);
         int height = MeasureSpec.getSize(heightMeasureSpec);
         //测量高
-        if (heightSpecMode == MeasureSpec.AT_MOST || heightSpecMode == MeasureSpec.UNSPECIFIED) {//包裹内容的时候
+        //包裹内容的时候
+        if (heightSpecMode == MeasureSpec.AT_MOST || heightSpecMode == MeasureSpec.UNSPECIFIED) {
             heightMeasureSpec = MeasureSpec.makeMeasureSpec((int) v, MeasureSpec.EXACTLY);
             height = (int) (v + 0.5);
         }
@@ -94,7 +96,8 @@ public class BubbleNum extends View {
         int r = Math.min(measuredHeight, measuredWidth);
 
         //画数字
-        if (!justBubble) {//如果只显示泡泡就不画数字
+        if (!justBubble) {
+            //如果只显示泡泡就不画数字
             String text = String.valueOf(mNum);
             if (mNum > 99) {
                 text = "99+";
