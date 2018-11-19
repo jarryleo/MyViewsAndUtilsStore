@@ -16,6 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".activity.NativeWebActivity"/>
+        <activity android:name=".activity.TbsWebActivity"/>
     </application>
 
 </manifest>

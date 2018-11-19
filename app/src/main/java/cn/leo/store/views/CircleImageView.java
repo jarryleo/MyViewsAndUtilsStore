@@ -101,7 +101,6 @@ public class CircleImageView extends ImageView {
         //canvas.drawCircle(mBorderSize / 2, mBorderSize / 2, radius, borderPaint);
     }
 
-
     @Override
     public void setImageBitmap(Bitmap bm) {
         super.setImageBitmap(bm);
@@ -136,7 +135,7 @@ public class CircleImageView extends ImageView {
     /**
      * 设置边框的颜色
      *
-     * @param borderColor
+     * @param borderColor 边框颜色
      */
     public void setBorderColor(int borderColor) {
         borderPaint.setColor(borderColor);
@@ -162,7 +161,7 @@ public class CircleImageView extends ImageView {
      * Drawable转Bitmap
      *
      * @param drawable
-     * @return
+     * @return bitmap
      */
     private Bitmap drawableToBitmap(Drawable drawable) {
         Bitmap bitmap = Bitmap.createBitmap(

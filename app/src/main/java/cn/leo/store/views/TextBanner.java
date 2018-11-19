@@ -25,7 +25,7 @@ public class TextBanner extends TextSwitcher implements ViewSwitcher.ViewFactory
     private float textSize = 16f;
     private int textColor = Color.BLACK;
     private Handler mHandler = new Handler();
-    private int current; //当前文本序列
+    private int current;
 
     public TextBanner(Context context) {
         this(context, null);
@@ -47,12 +47,15 @@ public class TextBanner extends TextSwitcher implements ViewSwitcher.ViewFactory
         mHandler.removeCallbacks(this);
         setText(mTexts.get(current));
         current = current < mTexts.size() - 1 ? ++current : 0;
-        if (mTexts.size() > 1)
+        if (mTexts.size() > 1) {
             mHandler.postDelayed(this, interval);
+        }
     }
 
     public void setTexts(List<String> texts) {
-        if (texts == null || texts.size() == 0) return;
+        if (texts == null || texts.size() == 0) {
+            return;
+        }
         mTexts = texts;
         current = 0;
         run();
