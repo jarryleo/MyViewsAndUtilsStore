@@ -20,7 +20,7 @@ public class SafetyMainHandler extends Handler implements LifecycleObserver {
     }
 
     public SafetyMainHandler(Activity activity, Callback callback) {
-        super(callback);
+        super(Looper.getMainLooper(), callback);
         bindLifecycle(activity);
     }
 
